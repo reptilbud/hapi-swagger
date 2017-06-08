@@ -1,14 +1,9 @@
 # hapi-swagger
 
-This is a [OpenAPI (aka Swagger)](https://openapis.org/) plug-in for [HAPI](http://hapijs.com/) When installed it will self document the API interface
-in a project.
+This repository is a fork of the [hapi-swagger](https://github.com/glennjones/hapi-swagger) project developped by glennjones.
 
-[![build status](https://img.shields.io/travis/glennjones/hapi-swagger.svg?style=flat-square)](http://travis-ci.org/glennjones/hapi-swagger)
-[![Coverage Status](https://img.shields.io/coveralls/glennjones/hapi-swagger/dev.svg?style=flat-square)](https://coveralls.io/r/glennjones/hapi-swagger)
-[![npm downloads](https://img.shields.io/npm/dm/hapi-swagger.svg?style=flat-square)](https://www.npmjs.com/package/hapi-swagger)
-[![MIT license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.github.com/glennjones/microformat-shic/master/license.txt)
-
-__Review [release notes for v7.0.0](https://github.com/glennjones/hapi-swagger/issues/325)__
+[![Build Status](https://travis-ci.org/reptilbud/hapi-swagger.svg?branch=master)](https://travis-ci.org/reptilbud/hapi-swagger)
+[![Coverage Status](https://coveralls.io/repos/github/reptilbud/hapi-swagger/badge.svg?branch=master)](https://coveralls.io/github/reptilbud/hapi-swagger?branch=master)
 
 
 # Install
