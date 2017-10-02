@@ -5,7 +5,6 @@ This repository is a fork of the [hapi-swagger](https://github.com/glennjones/ha
 [![Build Status](https://travis-ci.org/reptilbud/hapi-swagger.svg?branch=master)](https://travis-ci.org/reptilbud/hapi-swagger)
 [![Coverage Status](https://coveralls.io/repos/github/reptilbud/hapi-swagger/badge.svg?branch=master)](https://coveralls.io/github/reptilbud/hapi-swagger?branch=master)
 
-
 # Install
 
 You can add the module to your HAPI using npm:

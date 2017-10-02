@@ -108,7 +108,7 @@ lab.experiment('info', () => {
     });
 
     lab.test('info object with custom properties', (done) => {
- 
+
         const swaggerOptions = {
             info: {
                 'title': 'test title for lab',

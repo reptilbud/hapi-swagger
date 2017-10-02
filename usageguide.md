@@ -1,4 +1,4 @@
-# 7.7.0 Usage Guide
+# 7.8.0 Usage Guide
 
 ### Content
 * [JSON body](#json-body)
@@ -31,7 +31,8 @@
 # JSON body
 The most common API endpoint with HAPI.js is one that POST's a JSON body.
 ```Javascript
-method: 'POST',
+{
+    method: 'POST',
     path: '/items',
     config: {
         handler: (request, reply) => { reply('OK'); },
@@ -86,7 +87,7 @@ The plugin will take either a JavaScript or JOI object for `params` `query` and 
             },
             query: {
                 search: Joi.string()
-            }
+            },
             headers: Joi.object({
                 'authorization': Joi.string().required()
             }).unknown()
