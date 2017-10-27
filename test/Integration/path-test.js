@@ -837,7 +837,8 @@ lab.experiment('path', () => {
                 tags: ['api'],
                 plugins: {
                     'hapi-swagger': {
-                        'custom-values': {
+                        'x-scope': 'scope.value',
+                        'x-custom-values': {
                             'scope': 'rights.create'
                         },
                     },
@@ -855,6 +856,7 @@ lab.experiment('path', () => {
                 expect(err).to.equal(null);
                 expect(response.statusCode).to.equal(200);
                 expect(response.result.paths['/customvalues'].post['x-custom-values'].scope).to.equal('rights.create');
+                expect(response.result.paths['/customvalues'].post['x-scope']).to.equal('scope.value');
 
                 Helper.validate(response, done, expect);
             });

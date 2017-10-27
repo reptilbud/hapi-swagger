@@ -108,6 +108,41 @@ lab.experiment('builder', () => {
         });
     });
 
+    lab.test('set x-* values for swagger root object properties', (done) => {
+
+        const swaggerOptions = {
+            'swagger': '5.9.45',
+            'schemes': ['https'],
+            'basePath': '/base',
+            'consumes': ['application/x-www-form-urlencoded'],
+            'produces': ['application/json', 'application/xml'],
+            'externalDocs': {
+                'description': 'Find out more about HAPI',
+                'url': 'http://hapijs.com'
+            },
+            'x-test': 'my_value'
+        };
+
+        Helper.createServer(swaggerOptions, routes, (err, server) => {
+
+            expect(err).to.equal(null);
+            server.inject({ method: 'GET', url: '/swagger.json' }, function (response) {
+
+                expect(response.statusCode).to.equal(200);
+                //console.log(JSON.stringify(response.result))
+                expect(response.result.swagger).to.equal('2.0');
+                expect(response.result['x-test']).to.equal('my_value');
+                expect(response.result.schemes).to.equal(['https']);
+                expect(response.result.basePath).to.equal('/base');
+                expect(response.result.consumes).to.equal(['application/x-www-form-urlencoded']);
+                expect(response.result.produces).to.equal(['application/json', 'application/xml']);
+                expect(response.result.externalDocs).to.equal(swaggerOptions.externalDocs);
+                Helper.validate(response, done, expect);
+            });
+
+        });
+    });
+
 
 
 
