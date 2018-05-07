@@ -1,7 +1,7 @@
 {
   "name": "@reptilbud/hapi-swagger",
   "description": "A swagger documentation UI generator plugin for hapi (based on glennjones work)",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": "Sebastien Ritz",
   "repository": {
     "type": "git",
